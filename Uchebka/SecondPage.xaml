@@ -24,6 +24,7 @@
         <TextBox x:Name="chetire" TextWrapping="Wrap" Grid.Column="2" Margin="31,2,0,90"/>
         <Button Content="Добавить" Margin="10,1,30,89" Grid.Column="1" Click="Button_Click_1"/>
         <ComboBox x:Name="shest" Width="120" Margin="13,101,134,0" SelectionChanged="ComboBox_SelectionChanged"/>
+        <Button Content="Удалить" Grid.Column="2" Margin="50,82,50,9" Click="Button_Click_2"/>
 
     </Grid>
 </Page>

@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Data;
+using System.Diagnostics;
 using System.Windows;
 using Uchebka.DataSet1TableAdapters;
 namespace Uchebka
@@ -47,6 +49,14 @@ namespace Uchebka
         {
             Car.InsertQuery(One.Text, Convert.ToInt16(Two.Text));
             Uchebka1.ItemsSource = Car.GetData();
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            int id = (int)(Uchebka1.SelectedItem as DataRowView).Row[0];
+            Car.DeleteQuery(id);
+            Uchebka1.ItemsSource = Car.GetData();
+            
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Security.AccessControl;
 using System.Text;
@@ -57,6 +58,13 @@ namespace Uchebka
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            int id =(int) (Price.SelectedItem as DataRowView).Row[0];
+            price.DeleteQuery(id);
+            Price.ItemsSource = price.GetData();
         }
     }
 }
